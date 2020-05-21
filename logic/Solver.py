@@ -14,7 +14,7 @@ class Solver:
     def solve_with_precision(cls, a, b, precision, func):
         n = 1
         previous_solution = 0
-        actual_solution = 1
+        actual_solution = cls.solve(a, b, n, func)
         while abs(actual_solution - previous_solution) >= 10 ** -precision:
             n *= 2
             previous_solution = actual_solution
